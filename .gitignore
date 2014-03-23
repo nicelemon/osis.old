@@ -1,3 +1,6 @@
+**/*.swp
+*.swp
+grunt-aws.json
 node_modules
 .tmp
 *.log

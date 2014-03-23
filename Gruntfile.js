@@ -59,6 +59,29 @@ module.exports = function(grunt) {
         files: ['source/**'],
         tasks: ['copy']
       }
+    },
+
+    aws: grunt.file.readJSON('grunt-aws.json'),
+    s3: {
+      options: {
+        key: '<%= aws.key %>',
+        secret: '<%= aws.secret %>',
+        bucket: '<%= aws.bucket %>',
+        region: '<%= aws.region %>',
+        access: 'public-read'
+      },
+      dev: {
+        options: {
+          bucket: '<%= aws.bucket %>'
+        },
+        upload: [
+          {
+            src: 'build/**/*.*',
+            dest: '/',
+            rel: 'build'
+          }
+        ]
+      }
     }
  
   });
