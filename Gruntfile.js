@@ -70,9 +70,21 @@ module.exports = function(grunt) {
         region: '<%= aws.region %>',
         access: 'public-read'
       },
-      dev: {
+      prod: {
         options: {
           bucket: '<%= aws.bucket %>'
+        },
+        upload: [
+          {
+            src: 'build/**/*.*',
+            dest: '/',
+            rel: 'build'
+          }
+        ]
+      },
+      stage: {
+        options: {
+          bucket: '<%= aws.stagingbucket %>'
         },
         upload: [
           {
@@ -93,6 +105,9 @@ module.exports = function(grunt) {
     'copy',
     'watch'
   ]);
+
+  grunt.registerTask('prod', ['s3:prod']);
+  grunt.registerTask('stage', ['s3:stage']);
 
   // define default task
   grunt.registerTask('default', ['build']);
