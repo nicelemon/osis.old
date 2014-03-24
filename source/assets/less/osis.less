@@ -4,6 +4,9 @@
 @green:#00DB96;
 @yellow:#f1df97;
 
+@dumb_blue:#002DEE;
+@neon_purple:#cc00ff;
+
 @defaultThemeColor:@orange;
 
 
@@ -11,8 +14,62 @@
 
 
 
+/*-------------Drawers---------------*/
 
-/*-------------Scoliosis-------------*/
+.drawer_right {
+	background-color: @neon_purple;
+	color: @yellow;
+}
+
+.drawer_left {
+	background-color: @green;
+	color: @yellow;
+}
+
+/*--------------Controls----------------*/
+
+.controls-top {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: auto;
+	height: 10%;
+	background-color: rgba(255,0,0,0.2);
+	z-index: 3;
+	padding: 2%;
+}
+
+// .controls-right {
+// 	position: relative;
+// 	top: 0;
+// 	right: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	width: 10%;
+// 	height: 100vh;
+// 	background-color: rgba(255,0,0,0.2);
+// 	z-index: 3;
+// }
+
+.controls-bottom {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: 10%;
+	background-color: rgba(255,0,0,.2);
+	z-index: 3;
+	padding: 2%;
+}
+
+
+/*-------------Primary Structure-------------*/
+
+body {
+	background-color: @dumb_blue;
+}
 
 #Scoliosis {
 	width: 100%;
