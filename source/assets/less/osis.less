@@ -34,7 +34,9 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	width: auto;
+	width: ~"-webkit-calc(100% - 156px)";
+	width: ~"-moz-calc(100% - 156px)";
+	width: ~"calc(100% - 156px)";
 	height: 10%;
 	background-color: rgba(255,0,0,0.2);
 	z-index: 3;
@@ -57,11 +59,17 @@
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	width: 100vw;
+	width: ~"-webkit-calc(100% - 156px)";
+	width: ~"-moz-calc(100% - 156px)";
+	width: ~"calc(100% - 156px)";
 	height: 10%;
 	background-color: rgba(255,0,0,.2);
 	z-index: 3;
 	padding: 2%;
+}
+
+.calc-width {
+	width: ~"calc(100% - 200px)";
 }
 
 
